@@ -66,4 +66,16 @@ public partial class MainWindow : Window
         // add the emp object to the List<>
         _employees.Add(_emp);
     }
+
+    private void btnClear_Click(object sender, RoutedEventArgs e)
+    {
+        rdoHourly.IsChecked = true;
+        txtName.Text = txtInput2.Text = txtInput3.Text = "";
+        txtGrossEarnings.Text = txtTax.Text = txtNetEarnings.Text = "";
+    }
+
+    private void btnClose_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
 }
