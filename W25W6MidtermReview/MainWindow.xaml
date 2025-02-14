@@ -12,8 +12,8 @@
 
         <GroupBox x:Name="grpEmployeeType" Height="58" Header="Select Type of Employee" Width="278" Canvas.Left="284" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Canvas>
-                <RadioButton x:Name="rdoHourly" Content="Hourly Paid"  Margin="59,0,209,0" Height="16" Width="107" Canvas.Left="-48" Canvas.Top="10"/>
-                <RadioButton x:Name="rdoCommission" Content="Commission Based" Height="16" Width="129" Canvas.Left="123" Canvas.Top="10"/>
+                <RadioButton x:Name="rdoHourly" Content="Hourly Paid"  Margin="59,0,209,0" Height="16" Width="107" Canvas.Left="-48" Canvas.Top="10" Checked="rdoHourly_Checked"/>
+                <RadioButton x:Name="rdoCommission" Content="Commission Based" Height="16" Width="129" Canvas.Left="123" Canvas.Top="10" Checked="rdoCommission_Checked"/>
             </Canvas>
         </GroupBox>
 
@@ -28,7 +28,7 @@
             </Canvas>
         </GroupBox>
 
-        <Button x:Name="btnCalculate" Content="Calculate" Canvas.Left="579" Canvas.Top="133" IsDefault="True" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="btnCalculate" Content="Calculate" Canvas.Left="579" Canvas.Top="133" IsDefault="True" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnCalculate_Click"/>
         <Button x:Name="btnClear" Content="Clear" Canvas.Left="579" Canvas.Top="178" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button x:Name="btnClose" Content="Close" Canvas.Left="579" Canvas.Top="223" Height="30" Width="84" IsCancel="True" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
