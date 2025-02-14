@@ -78,4 +78,32 @@ public partial class MainWindow : Window
     {
         Close();
     }
+
+    private void lstEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (lstEmployees.SelectedItem != null)
+        {
+            _emp = _employees[lstEmployees.SelectedIndex];
+
+            txtName.Text = _emp.Name;
+
+            if (_emp is HourlyEmployee hrEmp)
+            {
+                //HourlyEmployee hrEmp = (HourlyEmployee)_emp;
+                txtInput2.Text = hrEmp.Hours.ToString();
+                txtInput3.Text = hrEmp.Wage.ToString();
+                rdoHourly.IsChecked = true;
+            }
+            else if (_emp is CommissionEmployee commEmp)
+            {
+                txtInput2.Text = commEmp.GrossSales.ToString();
+                txtInput3.Text = commEmp.CommissionRate.ToString();
+                rdoCommission.IsChecked = true;
+            }
+
+            txtGrossEarnings.Text = _emp.GrossEarnings().ToString("C");
+            txtTax.Text = _emp.Tax().ToString("C");
+            txtNetEarnings.Text = _emp.NetEarnings().ToString("C");
+        }
+    }
 }
