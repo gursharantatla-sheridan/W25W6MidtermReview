@@ -97,7 +97,7 @@ public partial class MainWindow : Window
             else if (_emp is CommissionEmployee commEmp)
             {
                 txtInput2.Text = commEmp.GrossSales.ToString();
-                txtInput3.Text = commEmp.CommissionRate.ToString();
+                txtInput3.Text = (commEmp.CommissionRate * 100).ToString();
                 rdoCommission.IsChecked = true;
             }
 

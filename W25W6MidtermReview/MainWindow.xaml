@@ -12,7 +12,7 @@
 
         <GroupBox x:Name="grpEmployeeType" Height="58" Header="Select Type of Employee" Width="278" Canvas.Left="284" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Canvas>
-                <RadioButton x:Name="rdoHourly" Content="Hourly Paid"  Margin="59,0,209,0" Height="16" Width="107" Canvas.Left="-48" Canvas.Top="10" Checked="rdoHourly_Checked"/>
+                <RadioButton x:Name="rdoHourly" Content="Hourly Paid"  Margin="59,0,209,0" Height="16" Width="107" Canvas.Left="-48" Canvas.Top="10" Checked="rdoHourly_Checked" IsChecked="False"/>
                 <RadioButton x:Name="rdoCommission" Content="Commission Based" Height="16" Width="129" Canvas.Left="123" Canvas.Top="10" Checked="rdoCommission_Checked"/>
             </Canvas>
         </GroupBox>
